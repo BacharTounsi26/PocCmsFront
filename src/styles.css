@@ -1,0 +1,165 @@
+/* ==================== Global ==================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #6c5ce7;
+}
+
+/* ==================== SearchBar ==================== */
+.search-bar input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+}
+
+/* ==================== Status ==================== */
+.status-message {
+  text-align: center;
+  padding: 24px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.status-message.error {
+  color: #ef4444;
+}
+
+/* ==================== ProductList ==================== */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ==================== ProductCard ==================== */
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.product-card:hover {
+  border-color: #a5b4fc;
+  background: #f5f3ff;
+}
+
+.product-card.selected {
+  border-color: #6c5ce7;
+  background: #ede9fe;
+}
+
+.product-card input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #6c5ce7;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-code {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ==================== Selected Panel ==================== */
+.selected-panel {
+  margin: 16px 0;
+  padding: 12px;
+  background: #ede9fe;
+  border-radius: 8px;
+}
+
+.selected-panel h3 {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #6c5ce7;
+}
+
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #c4b5fd;
+  border-radius: 20px;
+  color: #4c1d95;
+}
+
+.tag button {
+  background: none;
+  border: none;
+  color: #7c3aed;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.tag button:hover {
+  color: #ef4444;
+}
