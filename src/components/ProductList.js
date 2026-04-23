@@ -16,8 +16,8 @@ export default function ProductList({
     return <div className="status-message error">Erreur : {error}</div>;
   }
 
-  if (products.length === 0) {
-    return <div className="status-message">Aucun produit trouvé.</div>;
+  if (!products || products.length === 0) {
+    return null;
   }
 
   return (
